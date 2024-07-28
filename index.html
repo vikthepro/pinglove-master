@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home | The Ping</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html,
+        body {
+            overflow: hidden;
+            height: 100vh;
+            width: 100vw;
+            background-color: rgb(13, 13, 13);
+        }
+
+        .container {
+            height: 100%;
+            width: 100%;
+            position: absolute;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .wrapper {
+            width: 800px;
+            height: 250px;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        h1 {    
+            color: rgb(206, 206, 206);
+            font-size: 5em;
+        }
+
+        h1>span {
+            color: #ff0000;
+        }
+
+        .nav #options {
+            display: flex;
+            flex-direction: column;
+            height: 130px;
+            justify-content: space-between;
+        }
+
+        .nav ul li {
+            list-style: none;
+            display: flex;
+            width: 430px;
+            transition: all 0.2s ease-out;
+        }
+        .nav li img{
+            place-self: flex-start;
+            transition: all 0.3s ease-out;
+        }
+        .opacity0{
+            opacity: 0;
+        }
+        .nav a {
+            text-decoration: none;
+        }
+        canvas {
+            z-index: 100;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="wrapper">
+            <h1>Welcome to <span>The Ping</span></h1>
+            <div class="nav" id="nav">
+                <ul id="options">
+                    <li class="option" id="optionSingle"></li>
+                    <li class="option" id="optionMulti"></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <canvas></canvas>
+    <script src="index.js"></script>
+</body>
+
+</html>

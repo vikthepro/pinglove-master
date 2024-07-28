@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Single Player | The Pong</title>
+    <style>
+        body,
+        html {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            overflow: hidden;
+        }
+
+        canvas {
+            background-color: rgb(13, 13, 13);
+        }
+
+        button{
+            padding: 10px 20px;
+            font-size: 2em;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            border: none;
+            transform: translate(-50%, -50%);
+            border-radius: 10px;
+            background-color: #5833a6;
+            color: rgb(206, 206, 206);
+        }
+
+        #start{
+            position: absolute;
+        }
+        
+        #restart{
+            display: none;
+        }
+
+        .wrapper{
+            position: absolute;
+            width: 100%;
+            display: flex;
+            justify-content: center;
+        }
+        
+        .score{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 500px;
+            height: 200px;
+        }
+        
+        .players{
+            display: none;
+            opacity: 20%;
+            width: 200px;
+            height: 100%;
+            text-align: center;
+            font-size: 10em;
+            color: white;
+        }
+
+        #player1{
+            border-right: 5px dashed white;
+        }
+        #player2{
+            border-left: 5px dashed white;
+            
+        }
+
+    </style>
+</head>
+
+<body>
+    <button id="start">start!</button>
+    <button id="restart">Continue</button>
+    <div class="wrapper">
+        <div class="score">
+            <div class="players" id="player1">0</div>
+            <div class="players" id="player2">0</div>
+        </div>
+    </div>
+    <canvas></canvas>
+    <script src="./SinglePlayer.js"></script>
+</body>
+
+</html>
